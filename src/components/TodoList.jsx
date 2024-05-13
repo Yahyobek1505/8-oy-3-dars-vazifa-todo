@@ -34,10 +34,7 @@ const TodoList = () => {
   };
   const handleEditInputTodo = (text) => {
     if (text) {
-      // console.log(text); text-bor
-      // setEditInput(text);
-      // console.log(editInput);
-      // return text;
+      
       const id = taskId;
       dispatch(editTodo({ id, text }));
     } else {
@@ -48,11 +45,10 @@ const TodoList = () => {
 
   const handleEditTodo = (id) => {
     document.getElementById("my_modal_1").showModal();
-    // let text = handleEditInputTodo();
+   
     setTaskId(id);
 
-    // let text = ;
-    // text && dispatch(editTodo({ id, text }));
+   
   };
   return (
     <div className="bg-black bg-opacity-40 rounded-lg p-12">
@@ -83,6 +79,7 @@ const TodoList = () => {
                 checked={todo.completed}
                 onChange={() => handleToggleComplete(todo.id)}
                 className="cursor-pointer"
+                placeholder="Type here your tasks"
               />
               <p
                 className={`text-xl text-amber-700 ${
